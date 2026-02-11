@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5babdae76427e684191abf41176789c9, type: 3}
+  m_Script: {fileID: 11500000, guid: f43f8f0535a09d24b9fc1370d65b6314, type: 3}
   m_Name: Rock_Big
   m_EditorClassIdentifier: 
-  displayName: Rock_Big
+  displayName: Rock
   interactRange: 2
   maxHp: 5
   useDrops: 0

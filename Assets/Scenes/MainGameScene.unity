@@ -311,13 +311,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc425b27a1dec6e4392d5dccf0e29f34, type: 3}
+  m_Script: {fileID: 11500000, guid: 687fa81baa22e2d408675b5eb8568bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1891164949}
   FollowTrigger: 1
   offset: {x: 0, y: 0, z: -10}
-  sensivity: 1.5
+  sensivity: 0.5
   Max_zoom: 5
   Min_zoom: 2
 --- !u!1 &619394800
@@ -415,8 +415,8 @@ GameObject:
   - component: {fileID: 918936390}
   - component: {fileID: 918936389}
   - component: {fileID: 918936388}
-  - component: {fileID: 918936391}
   - component: {fileID: 918936392}
+  - component: {fileID: 918936391}
   m_Layer: 3
   m_Name: Rock_img_0
   m_TagString: Untagged
@@ -539,10 +539,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 918936387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bcce0d96df603e4684783bd4549abe9, type: 3}
+  m_Script: {fileID: 11500000, guid: 01094e9237e99374d88c26581a1ed245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: f100884693a49b94cbfe45c276c90ae0, type: 2}
+  duration: 0.1
+  amplitude: 0.2
+  vibrato: 6
 --- !u!114 &918936392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,12 +554,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 918936387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 258de735b64369249ace77c64c115d6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 627e072de65486a4ba7eada9c1c93c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.15
-  amplitude: 0.1
-  vibrato: 3
+  data: {fileID: 11400000, guid: dff33d2eb79fd384d9cf180e0be10021, type: 2}
 --- !u!1 &1160219127
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,8 +569,8 @@ GameObject:
   - component: {fileID: 1160219130}
   - component: {fileID: 1160219129}
   - component: {fileID: 1160219128}
-  - component: {fileID: 1160219131}
   - component: {fileID: 1160219132}
+  - component: {fileID: 1160219131}
   m_Layer: 3
   m_Name: Rock_img_0 (1)
   m_TagString: Untagged
@@ -693,10 +693,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1160219127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bcce0d96df603e4684783bd4549abe9, type: 3}
+  m_Script: {fileID: 11500000, guid: 01094e9237e99374d88c26581a1ed245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 815bbb3bc2482f942a588258ce440f3c, type: 2}
+  duration: 0.1
+  amplitude: 0.2
+  vibrato: 6
 --- !u!114 &1160219132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,12 +708,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1160219127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 258de735b64369249ace77c64c115d6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 627e072de65486a4ba7eada9c1c93c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.1
-  amplitude: 0.04
-  vibrato: 6
+  data: {fileID: 11400000, guid: ba57a0e9166a9464685625a065db1243, type: 2}
 --- !u!1 &1545894898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,9 +2688,9 @@ GameObject:
   - component: {fileID: 1891164949}
   - component: {fileID: 1891164948}
   - component: {fileID: 1891164947}
-  - component: {fileID: 1891164945}
   - component: {fileID: 1891164950}
-  - component: {fileID: 1891164951}
+  - component: {fileID: 1891164952}
+  - component: {fileID: 1891164953}
   m_Layer: 0
   m_Name: Stand_0
   m_TagString: Untagged
@@ -2698,19 +2698,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1891164945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891164944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b0b21fc07401743a9d0c9c94c4631f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!50 &1891164947
 Rigidbody2D:
   serializedVersion: 5
@@ -2845,7 +2832,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1.1111112}
   m_Direction: 0
---- !u!114 &1891164951
+--- !u!114 &1891164952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2854,7 +2841,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1891164944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2705efa9a0c999469eeab334c06d414, type: 3}
+  m_Script: {fileID: 11500000, guid: afba6c4dc42dc7c48adc8b7fd2a715db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+--- !u!114 &1891164953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891164944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2301b6c8f63d2c4429923c664c6f9d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
