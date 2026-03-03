@@ -13,10 +13,10 @@ public enum ItemType
 public class ItemData : ScriptableObject
 {
     [Header("Identity")]
-    [Tooltip("고유 ID (저장/로드 및 비교 기준). 1 이상 권장")]
+    [Tooltip("고유 ID (저장/로드 및 비교 기준)")]
     public int id = 1;
 
-    [Tooltip("표시용 이름(언어 변경 가능). 비교 기준으로 쓰지 않기")]
+    [Tooltip("표시용 이름(언어 변경 가능)")]
     public string itemName;
 
     [Header("Stack")]

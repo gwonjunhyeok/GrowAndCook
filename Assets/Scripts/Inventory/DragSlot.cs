@@ -6,11 +6,34 @@ public class DragSlot : Singleton<DragSlot>
     [SerializeField] private Image mItemImage;
     [HideInInspector] public DragData dragData;
 
+#if UNITY_EDITOR
+    private void Reset()
+    {
+        AutoBind();
+    }
+
+    private void OnValidate()
+    {
+        if (!Application.isPlaying)
+            AutoBind();
+    }
+#endif
+
+    private void AutoBind()
+    {
+        // DragSlot 오브젝트 아래 자식에 있는 Image를 자동으로 잡는다
+        if (mItemImage == null)
+            mItemImage = GetComponentInChildren<Image>(true);
+    }
+
     protected override void Awake()
     {
-        base.Awake(); // Singleton의 Awake 실행(중복 인스턴스 제거 등)
+        base.Awake();
 
-        // 네가 DragSlot에서 하던 초기화 코드
+        // 런타임에서도 혹시 누락됐으면 1회 보정
+        if (mItemImage == null)
+            AutoBind();
+
         if (mItemImage != null)
         {
             mItemImage.enabled = false;
@@ -19,6 +42,10 @@ public class DragSlot : Singleton<DragSlot>
             Color c = mItemImage.color;
             c.a = 0f;
             mItemImage.color = c;
+        }
+        else
+        {
+            Debug.LogWarning("[DragSlot] 자식 Image를 찾지 못했습니다. DragSlot 오브젝트 아래에 Image가 있어야 합니다.");
         }
     }
 
@@ -49,7 +76,7 @@ public class DragSlot : Singleton<DragSlot>
 
         if (mItemImage == null)
         {
-            Debug.LogWarning("[DragSlot] mItemImage가 할당되지 않았습니다.");
+            Debug.LogWarning("[DragSlot] mItemImage가 할당되지 않았습니다. (자식 Image 누락)");
             return;
         }
 
