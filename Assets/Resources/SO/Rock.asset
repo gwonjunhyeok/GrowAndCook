@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c21c947ab8f67d4fa0a7943b9cb6beb, type: 3}
+  m_Name: Rock
+  m_EditorClassIdentifier: 
+  id: 1
+  localizedText:
+    koreanName: "\uB3CC"
+    englishName: rock
+    koreanDescription: "\uD3C9\uBC94\uD55C \uB3CC\n\uBB34\uC5B8\uAC00\uB97C \uC81C\uC791\uD560
+      \uB54C \uC7AC\uB8CC\uB85C \uC0AC\uC6A9\uB41C\uB2E4"
+    englishDescription: 'Common Stone
+
+      A material used for crafting'
+  maxStack: 10
+  icon: {fileID: 874407865703376995, guid: 9f685a35f51411143a3cbf2a5aa98504, type: 3}
+  itemType: 0
+  equipSlotType: 0
